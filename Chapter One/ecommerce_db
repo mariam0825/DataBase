@@ -1,0 +1,785 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "DB Notebook",
+    "content": "USE ecommerce_db;\n\nSHOW TABLE STATUS;\n\nINSERT INTO users (name, email)\nVALUES\n('Mariam', 'mariam@gmail.com'),\n('Aisha', 'aisha@gmail.com'),\n('John', 'john@gmail.com'),\n('David', 'david@gmail.com'),\n('Fatima', 'fatima@gmail.com');\n\nINSERT INTO products (name, price, stock)\nVALUES\n('laptops', 850000.00, 10),\n('iphone', 450000.00, 15),\n('Headphones', 35000.00, 30),\n('Samsung', 25000.00, 20),\n('Earpod', 12000.00, 50);\n\n\nINSERT INTO orders (user_id)\nVALUES\n(1),\n(2),\n(1),\n(3),\n(4),\n(5);\nSELECT * FROM users;\n\n",
+    "options": {
+        "tabSize": 4,
+        "indentSize": 4,
+        "insertSpaces": true,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": false,
+                "selectionStart": {
+                    "lineNumber": 1,
+                    "column": 1
+                },
+                "position": {
+                    "lineNumber": 1,
+                    "column": 1
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 1,
+                "column": 1
+            },
+            "firstPositionDeltaTop": 0
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 3,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "cf45f6d8-0b74-427c-a2a7-8ca693d3c1fd",
+                        "43c7ab31-dca8-4e50-dbd7-03857bcfb723"
+                    ]
+                },
+                "currentHeight": 200,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 17
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 17,
+                            "length": 20
+                        },
+                        "contentStart": 19,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "99b32b16-3f4f-44e9-9863-645f2d881f42",
+                    "resultId": "cf45f6d8-0b74-427c-a2a7-8ca693d3c1fd",
+                    "rows": [
+                        {
+                            "0": "order_items",
+                            "1": "InnoDB",
+                            "2": 10,
+                            "3": "Dynamic",
+                            "4": 0,
+                            "5": 0,
+                            "6": 16384,
+                            "7": 0,
+                            "8": 32768,
+                            "9": 0,
+                            "10": null,
+                            "11": "2026-11-10 12:57:50",
+                            "12": null,
+                            "13": null,
+                            "14": "utf8mb4_0900_ai_ci",
+                            "15": null,
+                            "16": "",
+                            "17": ""
+                        },
+                        {
+                            "0": "orders",
+                            "1": "InnoDB",
+                            "2": 10,
+                            "3": "Dynamic",
+                            "4": 0,
+                            "5": 0,
+                            "6": 16384,
+                            "7": 0,
+                            "8": 16384,
+                            "9": 0,
+                            "10": null,
+                            "11": "2026-11-10 12:57:50",
+                            "12": null,
+                            "13": null,
+                            "14": "utf8mb4_0900_ai_ci",
+                            "15": null,
+                            "16": "",
+                            "17": ""
+                        },
+                        {
+                            "0": "products",
+                            "1": "InnoDB",
+                            "2": 10,
+                            "3": "Dynamic",
+                            "4": 0,
+                            "5": 0,
+                            "6": 16384,
+                            "7": 0,
+                            "8": 0,
+                            "9": 0,
+                            "10": null,
+                            "11": "2026-11-10 12:57:50",
+                            "12": null,
+                            "13": null,
+                            "14": "utf8mb4_0900_ai_ci",
+                            "15": null,
+                            "16": "",
+                            "17": ""
+                        },
+                        {
+                            "0": "users",
+                            "1": "InnoDB",
+                            "2": 10,
+                            "3": "Dynamic",
+                            "4": 0,
+                            "5": 0,
+                            "6": 16384,
+                            "7": 0,
+                            "8": 16384,
+                            "9": 0,
+                            "10": null,
+                            "11": "2026-11-10 12:57:50",
+                            "12": null,
+                            "13": null,
+                            "14": "utf8mb4_0900_ai_ci",
+                            "15": null,
+                            "16": "",
+                            "17": ""
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "Name",
+                            "field": "0",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Engine",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Version",
+                            "field": "2",
+                            "dataType": {
+                                "type": 1,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 3,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "BOOL",
+                                    "BOOLEAN",
+                                    "INT1"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Row_format",
+                            "field": "3",
+                            "dataType": {
+                                "type": 43,
+                                "needsQuotes": true
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Rows",
+                            "field": "4",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Avg_row_length",
+                            "field": "5",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Data_length",
+                            "field": "6",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Max_data_length",
+                            "field": "7",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Index_length",
+                            "field": "8",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Data_free",
+                            "field": "9",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Auto_increment",
+                            "field": "10",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Create_time",
+                            "field": "11",
+                            "dataType": {
+                                "type": 26,
+                                "dateTimePrecision": 8,
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Update_time",
+                            "field": "12",
+                            "dataType": {
+                                "type": 26,
+                                "dateTimePrecision": 8,
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Check_time",
+                            "field": "13",
+                            "dataType": {
+                                "type": 26,
+                                "dateTimePrecision": 8,
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Collation",
+                            "field": "14",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Checksum",
+                            "field": "15",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Create_options",
+                            "field": "16",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "Comment",
+                            "field": "17",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 4 records retrieved in 18ms"
+                    },
+                    "totalRowCount": 4,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 1,
+                    "sql": "\n\nSHOW TABLE STATUS",
+                    "updatable": false
+                },
+                {
+                    "tabId": "99b32b16-3f4f-44e9-9863-645f2d881f42",
+                    "resultId": "43c7ab31-dca8-4e50-dbd7-03857bcfb723",
+                    "rows": [],
+                    "columns": [
+                        {
+                            "title": "*",
+                            "field": "0",
+                            "dataType": {
+                                "type": 0
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 0.901ms"
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "USE ecommerce_db",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 4,
+                "end": 11,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "05b70f21-b0e5-47e9-da80-6a85d0a5f2cd",
+                            "content": "OK, 5 rows affected in 18.136ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 191
+                        },
+                        "contentStart": 1,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 12,
+                "end": 20,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "dc92c8d4-9b05-4e28-bda4-b5b382cdc7d3",
+                            "content": "OK, 5 rows affected in 7.125ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 187
+                        },
+                        "contentStart": 1,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 187,
+                            "length": 1
+                        },
+                        "contentStart": 186,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 21,
+                "end": 29,
+                "language": "mysql",
+                "result": {
+                    "type": "text",
+                    "text": [
+                        {
+                            "type": 2,
+                            "index": 0,
+                            "resultId": "dcccb2dc-fd82-4ec7-e14a-421c9fbd188b",
+                            "content": "OK, 6 rows affected in 10.715ms"
+                        }
+                    ]
+                },
+                "currentHeight": 28,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 66
+                        },
+                        "contentStart": 1,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        },
+        {
+            "state": {
+                "start": 30,
+                "end": 31,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "24dcd99a-d830-42d0-dc60-e638ed0300c2"
+                    ]
+                },
+                "currentHeight": 352,
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 20
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 20,
+                            "length": 1
+                        },
+                        "contentStart": 19,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "99b32b16-3f4f-44e9-9863-645f2d881f42",
+                    "resultId": "24dcd99a-d830-42d0-dc60-e638ed0300c2",
+                    "rows": [
+                        {
+                            "0": 1,
+                            "1": "Mariam",
+                            "2": "mariam@gmail.com"
+                        },
+                        {
+                            "0": 2,
+                            "1": "Aisha",
+                            "2": "aisha@gmail.com"
+                        },
+                        {
+                            "0": 3,
+                            "1": "John",
+                            "2": "john@gmail.com"
+                        },
+                        {
+                            "0": 4,
+                            "1": "David",
+                            "2": "david@gmail.com"
+                        },
+                        {
+                            "0": 5,
+                            "1": "Fatima",
+                            "2": "fatima@gmail.com"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "id",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": true,
+                            "nullable": false,
+                            "autoIncrement": true
+                        },
+                        {
+                            "title": "name",
+                            "field": "1",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        },
+                        {
+                            "title": "email",
+                            "field": "2",
+                            "dataType": {
+                                "type": 17,
+                                "characterMaximumLength": 65535,
+                                "flags": [
+                                    "BINARY",
+                                    "ASCII",
+                                    "UNICODE"
+                                ],
+                                "needsQuotes": true,
+                                "parameterFormatType": "OneOrZero"
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 5 records retrieved in 1.987ms"
+                    },
+                    "totalRowCount": 5,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "SELECT * FROM users",
+                    "updatable": true,
+                    "fullTableName": "users"
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 32,
+                "end": 32,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 0
+                        },
+                        "contentStart": 0,
+                        "state": 0
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}
